@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/hero-compact.svg">
-  <img src="./assets/hero.svg" width="100%" alt="Sukumar Muthusamy. AI engineering and quality engineering. RAG, agents, and explainable AI.">
+  <img src="./assets/hero.svg" width="100%" alt="Sukumar Muthusamy. AI engineering and quality engineering. RAG, multi-agent systems, agent orchestration, and explainable AI.">
 </picture>
 
 <p align="center"><b>I build AI systems you can trace, test, and explain.</b></p>
@@ -26,7 +26,7 @@ I'm an AI practitioner with an M.S. in Artificial Intelligence from Kennesaw Sta
 My work connects **AI development, evaluation, and software quality**. I've validated enterprise Voice AI, built retrieval systems that expose their sources, and researched how neural networks can be represented as logic.
 
 - **Building** · RAG applications, tools for AI agents, and evidence-based release analysis.
-- **Exploring** · Agent orchestration with LangGraph, adaptive GraphRAG, and practical LLM evaluation.
+- **Exploring** · Multi-agent systems, orchestration with LangGraph and LangChain, adaptive GraphRAG, and practical LLM evaluation.
 - **Interested in** · Explainable AI, NLP, computer vision, and responsible AI design.
 
 ## Skills & tools
@@ -151,7 +151,7 @@ Worked on automation, API testing, and end-to-end voice and desktop workflows fo
 
 - Google Cloud · Perform Foundational Data, ML, and AI Tasks, 2021.
 - Accenture · Agile Professional Certified, 2018.
-- Tricentis · Automation Specialist Level 1, Tosca, 2017. Certification and training.
+- Tricentis · Automation Specialist Level 1, Tosca, 2017.
 - CITI Program · AI and Human Subject Protections, Biomedical Research, and Social, Behavioral &amp; Educational Research with Human Subjects, 2025 to 2028.
 - AWS Certified Developer Associate · Formerly certified, 2020 to 2023.
 
@@ -172,4 +172,15 @@ Worked on automation, API testing, and end-to-end voice and desktop workflows fo
 
 [LinkedIn](https://www.linkedin.com/in/sukumarmuthusamy/) · [Email](mailto:sukumarm1994@gmail.com) · [Browse my repositories](https://github.com/sukumarmuthusamy?tab=repositories)
 
-<sub>Outside the projects · anime, curiosity, and figuring out how things work.</sub>
+<table width="100%">
+<tr>
+<td width="150" align="center" valign="middle">
+<img src="./assets/goku.png" width="125" alt="A cheerful Goku waving.">
+</td>
+<td valign="middle">
+<h3>Beyond the keyboard</h3>
+<p><b>Anime · Curiosity · Figuring out how things work</b></p>
+<p>A good story. A new idea. One more experiment.</p>
+</td>
+</tr>
+</table>
