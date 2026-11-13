@@ -1,0 +1,49 @@
+name: Refresh contribution snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/snake.yml'
+      - 'scripts/static_calendar.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Generate light and dark snakes
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake-light.svg?color_snake=#7c3aed&color_dots=#edf1f5,#c9ecf4,#7cd3df,#25a7b4,#157887
+            assets/github-snake-dark.svg?color_snake=#b69aff&color_dots=#151e2e,#123c4a,#176475,#1aa2af,#67e8df
+
+      - name: Generate reduced-motion calendars
+        run: python3 scripts/static_calendar.py
+
+      - name: Commit refreshed artwork
+        run: |
+          git add assets/github-snake-*.svg assets/github-calendar-*.svg
+          if git diff --cached --quiet; then
+            echo 'Contribution artwork is already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh contribution snake'
+          git push
